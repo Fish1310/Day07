@@ -1,49 +1,80 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
+
 body {
     background-color: #111;
-    font-family: "Montserrat", serif;
-    text-align: center;
     color: #FFF;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    letter-spacing: 1px;
+    margin: 0;
 }
 
 h1 {
-    background: url(https://media2.giphy.com/media/enTHJKJ7vNpW9ao9kh/giphy.gif?cid=ecf05e47lint657m8zjh4bm1az6xgoqlr8besf38oop2ugmb&rid=giphy.gif&ct=g) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    font-size: 2.5em;
+    margin: 20px 0;
+}
 
-    color: transparent;
-    -moz-background-clip: text;
-    -webkit-background-clip: text;
-    text-transform: uppercase;
-    font-size: 100px;
-    font-size-adjust: revert;
-    line-height: .75;
+#score {
+    font-size: 1.5em;
     margin: 10px 0;
 }
-/* styling my button */
 
-.white-mode {
-    text-decoration: none;
-    padding: 7px 10px;
-    background-color: #122;
-    border-radius: 3px;
-    color: #FFF;
-    transition: .35s ease-in-out;
-    position: absolute;
-    left: 15px;
-    bottom: 15px;
-    font-family: "Montserrat", serif;
+#game-container {
+    position: relative;
+    width: 100vw;
+    height: 60vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.white-mode:hover {
+.circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer;
+}
+
+.mode-toggle {
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: #333;
+    color: #FFF;
+    border-radius: 5px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-family: "Montserrat", sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.mode-toggle:hover {
     background-color: #FFF;
-    color: #122;
+    color: #333;
+}
+
+.light-mode {
+    background-color: #EEE;
+    color: #000;
+}
+
+.light-mode h1,
+.light-mode #score {
+    color: #000;
+}
+
+.light-mode .mode-toggle {
+    background-color: #DDD;
+    color: #333;
+}
+
+.light-mode .mode-toggle:hover {
+    background-color: #333;
+    color: #FFF;
 }
